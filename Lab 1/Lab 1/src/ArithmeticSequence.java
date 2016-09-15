@@ -9,9 +9,9 @@ public class ArithmeticSequence extends Sequence{
 		A0 = current_element = 0;
 	}
 	
-	public ArithmeticSequence(int constant, int e0){
+	public ArithmeticSequence(int constant, int first_element){
 		this.constant = constant;
-		A0 = current_element = e0;
+		A0 = current_element = first_element;
 		
 	}
 	
@@ -35,9 +35,6 @@ public class ArithmeticSequence extends Sequence{
 	}
 	
 	public int get_sum_of_elements(int start_index, int end_index){
-		//int sum_start = (start_index-1)*(F0+get_element_by_index(start_index))/2;
-		//int sum_end = (end_index-1)*(F0+get_element_by_index(end_index))/2;
-		//return sum_end-sum_start;
 		int sum = (end_index-start_index)*(get_element_by_index(start_index-1)+get_element_by_index(end_index))/2;
 		return sum;
 	}
