@@ -62,9 +62,9 @@ public class FibonacciSequence extends Sequence{
 		return current_element;
 	}
 	public int get_sum_of_elements(int start_index, int end_index){
-		int sum = get_element_by_index(start_index);
-		//set the loop end index -1 than what it is so that get next elem works
-		for(int i = start_index; i < end_index - 1; i++){
+		get_element_by_index(start_index);
+		int sum = current_element;
+		for(int i = start_index; i < end_index; i++){
 			sum += get_next_element();
 		}
 		return sum;
